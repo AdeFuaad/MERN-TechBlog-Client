@@ -5,7 +5,7 @@ export default function IndexPage() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/post")
+    fetch("https://mern-tech-api.vercel.app/post")
       .then((response) => response.json())
       .then((data) => {
         console.log("Received posts: ", data);

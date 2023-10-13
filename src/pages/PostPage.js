@@ -8,7 +8,7 @@ export default function PostPage() {
   const { userInfo } = useContext(UserContext);
   const { id } = useParams();
   useEffect(() => {
-    fetch(`http://localhost:4000/post/${id}`).then((response) => {
+    fetch(`https://mern-tech-api.vercel.app/post/${id}`).then((response) => {
       response.json().then((postInfo) => {
         setPostInfo(postInfo);
       });
@@ -34,7 +34,10 @@ export default function PostPage() {
         </div>
       )} */}
       <div className="image" style={{ marginTop: "20px" }}>
-        <img src={`http://localhost:4000/${postInfo.cover}`} alt="" />
+        <img
+          src={`https://mern-tech-api.vercel.app/${postInfo.cover}`}
+          alt=""
+        />
       </div>
       <div
         style={{ marginTop: "30px" }}
